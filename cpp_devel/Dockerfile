@@ -10,9 +10,13 @@ RUN apt-get install -y libc-dbg
 RUN apt-get install -y nodejs
 RUN apt-get install -y git subversion
 RUN apt-get install -y cmake
+
+# Dependencies
 RUN apt-get install -y libboost-all-dev
 RUN apt-get install -y libcurl3-openssl-dev
 RUN apt-get install -y openssl
+RUN apt-get install -y libssl-dev
+RUN apt-get build-dep -y openssl
 
 # colorize output of make
 RUN apt-get install -y colormake

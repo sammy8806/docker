@@ -10,7 +10,9 @@ RUN apt-get install -y libc-dbg
 RUN apt-get install -y nodejs
 RUN apt-get install -y git subversion
 RUN apt-get install -y cmake
-RUN apt-get install -y libboost-dev
+RUN apt-get install -y libboost-all-dev
+RUN apt-get install -y libcurl3-openssl-dev
+RUN apt-get install -y openssl
 
 # colorize output of make
 RUN apt-get install -y colormake
@@ -26,7 +28,7 @@ RUN echo "export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking \n \
     export LESS_TERMCAP_me=$'\E[0m'           # end mode \n \
     export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode \n \
     export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box \n \
-    export LESS_TERMCAP_ue=$'\E[0m'           # end underline \n \ 
+    export LESS_TERMCAP_ue=$'\E[0m'           # end underline \n \
     export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline \n" >> /etc/bash.bashrc
 
 

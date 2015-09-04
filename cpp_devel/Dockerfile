@@ -1,8 +1,7 @@
-FROM ubuntu:trusty
+FROM ubuntu:wily
 MAINTAINER sammy8806
 
 RUN apt-get update; apt-get upgrade -y
-#RUN apt-get upgrade -y
 RUN apt-get install -y build-essential
 RUN apt-get install -y vim exuberant-ctags
 RUN apt-get install -y bash-completion

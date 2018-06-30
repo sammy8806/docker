@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM python:3.6-alpine
 MAINTAINER Steven T <admin@dark-it.net>
 
 RUN apk update && apk upgrade && \
